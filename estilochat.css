@@ -1,0 +1,41 @@
+body {
+    display: grid;
+    place-content: end;
+    margin: 5;
+    height: 100vh;
+    font-family: system-ui, sans-serif;
+  }
+  a {
+    text-decoration: none;
+    background-color: #5499C7;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 10px;
+    animation: jump 0.3s infinite;
+  }
+  a:hover {
+    animation: none;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(7deg);
+    }
+  
+    50% {
+      transform: rotate(0deg);
+    }
+  
+    75% {
+      transform: rotate(-7deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  

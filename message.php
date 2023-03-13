@@ -1,6 +1,6 @@
 <?php
 // conectando a la base de datos
-$conn = mysqli_connect("localhost", "root", "", "chatbot") or die("Database Error");
+$conn = mysqli_connect("localhost", "root", "root", "chatbot") or die("Database Error");
 
 // obteniendo el mensaje del usuario a través de ajax
 $getMesg = mysqli_real_escape_string($conn, $_POST['text']);
@@ -17,7 +17,5 @@ if (mysqli_num_rows($run_query) > 0) {
     $replay = $fetch_data['replies'];
     echo $replay;
 } else {
-    echo "¡Lo siento, no puedo ayudarte con este inconveniente! Favor comunícate con el administrador en el siguiente enlace:
-    
-    </br><a href='https://www.configuroweb.com/contacto/'>Contacto</a>";
+    echo "¡Lo siento, no puedo ayudarte con este inconveniente! Favor comunícate con el administrador en el siguiente enlace:";
 }
